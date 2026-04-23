@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samson's Restaurant – Castleton-on-Hudson, NY</title>
+  <meta name="description" content="Samson's Bar & Family Restaurant — a family-owned American restaurant and bar in Castleton-on-Hudson, NY. Comfort food, cold drinks, and warm hospitality." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Samson's <span>Restaurant</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="specials.html">Today's Specials</a></li>
+      <li><a href="contact.html">Contact & Hours</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('images/sign-sunset.jpg');opacity:0.55;"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Family Owned &amp; Operated Since 2010</div>
+    <h1>Where Every Meal<br>Feels Like <em>Home</em></h1>
+    <p class="hero-tagline">Bar &amp; Family Restaurant &nbsp;·&nbsp; Castleton-on-Hudson, NY</p>
+    <div class="hero-buttons">
+      <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+      <a href="specials.html" class="btn btn-outline">Today's Specials</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about-section">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <img
+          src="images/exterior.jpg"
+          alt="Samson's Restaurant exterior"
+          loading="lazy"
+        />
+      </div>
+      <div class="about-text">
+        <p class="section-label">Our Story</p>
+        <h2 class="section-title">A Local Landmark Built on Good Food &amp; Good Company</h2>
+        <div class="section-divider"></div>
+        <p>
+          Samson's is a family-owned bar and restaurant nestled in the heart of
+          Castleton-on-Hudson, New York. Since opening our doors in 2010, we've
+          been the go-to spot for neighbors, families, and friends looking for
+          honest, delicious comfort food and a welcoming atmosphere.
+        </p>
+        <p>
+          We take pride in sourcing fresh, carefully selected ingredients —
+          many from local farms right here in the Hudson Valley — and turning
+          them into the kind of meals that keep you coming back.
+        </p>
+        <p>
+          Whether you're stopping in for a bowl of homemade soup, a cold beer
+          after work, or a full dinner with the family, there's always a seat
+          and a smile waiting for you at Samson's.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Years Serving</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">92%</div>
+            <div class="stat-label">Recommend Us</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">2.2K</div>
+            <div class="stat-label">Followers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHOTO GALLERY ===== -->
+<section style="padding:0;background:#111;">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);height:320px;">
+    <div style="overflow:hidden;position:relative;cursor:pointer;" onclick="openLightbox('images/sign-sunset.jpg','The Samson\'s sign glowing at sunset')">
+      <img src="images/sign-sunset.jpg" alt="Samson's sign at sunset" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);display:flex;align-items:flex-end;padding:16px;">
+        <span style="color:white;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;font-family:'Lato',sans-serif;">The Sign</span>
+      </div>
+    </div>
+    <div style="overflow:hidden;position:relative;cursor:pointer;" onclick="openLightbox('images/exterior.jpg','Samson\'s Restaurant exterior')">
+      <img src="images/exterior.jpg" alt="Samson's exterior" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);display:flex;align-items:flex-end;padding:16px;">
+        <span style="color:white;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;font-family:'Lato',sans-serif;">The Restaurant</span>
+      </div>
+    </div>
+    <div style="overflow:hidden;position:relative;cursor:pointer;" onclick="openLightbox('images/bar.jpg','The bar at Samson\'s')">
+      <img src="images/bar.jpg" alt="Samson's bar" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);display:flex;align-items:flex-end;padding:16px;">
+        <span style="color:white;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;font-family:'Lato',sans-serif;">The Bar</span>
+      </div>
+    </div>
+    <div style="overflow:hidden;position:relative;cursor:pointer;" onclick="openLightbox('images/party.jpg','The Samson\'s community')">
+      <img src="images/party.jpg" alt="Samson's community" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);display:flex;align-items:flex-end;padding:16px;">
+        <span style="color:white;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;font-family:'Lato',sans-serif;">The Community</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;cursor:pointer;" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.5);">
+  <div id="lightbox-cap" style="position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.7);font-size:0.9rem;font-family:'Lato',sans-serif;letter-spacing:1px;"></div>
+  <button onclick="closeLightbox()" style="position:absolute;top:20px;right:24px;background:none;border:none;color:white;font-size:2rem;cursor:pointer;line-height:1;">✕</button>
+</div>
+
+<!-- ===== FEATURES ===== -->
+<section class="features-section">
+  <div class="section-inner">
+    <p class="section-label" style="color:var(--accent)">Why Samson's</p>
+    <h2 class="section-title">Everything You Love About a Great Local Restaurant</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">🍽️</span>
+        <h3>Comfort Food Done Right</h3>
+        <p>From hearty dinners and hand-pressed burgers to homemade soups made fresh daily.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🍺</span>
+        <h3>Full Bar</h3>
+        <p>Cold beers on tap, cocktails, and your favorite drinks served with a smile.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🌿</span>
+        <h3>Fresh Local Ingredients</h3>
+        <p>We partner with local Hudson Valley farms to bring the freshest flavors to your plate.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">👨‍👩‍👧</span>
+        <h3>Family Friendly</h3>
+        <p>A dedicated kids' menu and a warm atmosphere the whole family will enjoy.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🪑</span>
+        <h3>Outdoor Seating</h3>
+        <p>Enjoy the fresh Hudson Valley air with our comfortable outdoor seating area.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🎤</span>
+        <h3>Karaoke Nights</h3>
+        <p>Live entertainment and karaoke nights — follow our Facebook for the schedule.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DAILY SPECIALS TEASER ===== -->
+<section class="specials-teaser">
+  <div class="section-inner">
+    <p class="section-label" style="color:rgba(255,255,255,0.7)">Fresh Every Day</p>
+    <h2 class="section-title">Check Out Today's Specials</h2>
+    <div class="section-divider center"></div>
+    <p>Our kitchen puts together something special every single day — unique soups,<br>hearty entrees, and featured plates you won't find on the regular menu.</p>
+    <a href="specials.html" class="btn btn-outline">See Today's Specials</a>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section" style="position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:url('images/party.jpg');background-size:cover;background-position:center;opacity:0.06;"></div>
+  <div class="section-inner" style="position:relative;">
+    <p class="section-label">What People Are Saying</p>
+    <h2 class="section-title">Loved by the Community</h2>
+    <div class="section-divider"></div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Best comfort food in the area. The meatloaf is incredible and the service is always friendly. This place feels like home."</p>
+        <div class="testimonial-author">— Local Yelp Reviewer</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Samson's is our family's go-to spot every Sunday. The soups are always amazing and the daily specials are worth every penny."</p>
+        <div class="testimonial-author">— Facebook Review</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Great local bar and restaurant. Cold beer, great wings, and the staff treats you like a regular from day one. Highly recommend!"</p>
+        <div class="testimonial-author">— TripAdvisor Reviewer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA STRIP ===== -->
+<div class="cta-strip">
+  <h2>Ready to Stop In?</h2>
+  <p>Open Tuesday–Saturday from 11am. Walk-ins always welcome.</p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a href="tel:5184775353" class="btn btn-primary">📞 Call (518) 477-5353</a>
+    <a href="contact.html" class="btn btn-outline">Hours &amp; Location</a>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>Samson's Restaurant</h2>
+        <p>A family-owned bar and restaurant in Castleton-on-Hudson, NY. Serving fresh, locally-sourced comfort food and cold drinks since 2010.</p>
+        <div class="footer-phone">📞 (518) 477-5353</div>
+        <div class="footer-social" style="margin-top:16px;">
+          <a href="https://www.facebook.com/Samsonsbarandfamilyrestaurant/" target="_blank" rel="noopener" class="social-btn" title="Facebook">f</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="specials.html">Today's Specials</a></li>
+          <li><a href="contact.html">Contact &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Visit Us</h3>
+        <ul>
+          <li><a href="https://maps.google.com/?q=1736+US-9,+Castleton-on-Hudson,+NY+12033" target="_blank" rel="noopener">1736 US Route 9<br>Castleton-on-Hudson, NY 12033</a></li>
+          <li style="margin-top:12px;color:rgba(245,222,179,0.55);font-size:0.92rem;">
+            Tue–Thu: 11am–10pm<br>
+            Fri–Sat: 11am–11pm<br>
+            Sun: 12pm–8pm<br>
+            Mon: Closed
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Samson's Bar &amp; Family Restaurant. All rights reserved.</p>
+      <p>1736 US Route 9, Castleton-on-Hudson, NY 12033</p>
+    </div>
+  </div>
+</footer>
+
+<script defer src="/_vercel/insights/script.js"></script>
+<script src="main.js"></script>
+<script>
+function openLightbox(src, caption) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-cap').textContent = caption;
+  const lb = document.getElementById('lightbox');
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>

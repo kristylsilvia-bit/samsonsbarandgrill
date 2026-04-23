@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Today's Specials – Samson's Restaurant</title>
+  <meta name="description" content="See today's daily specials at Samson's Bar & Family Restaurant — fresh soups, featured plates, and limited-time deals, live from their Facebook page." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Facebook feed wrapper */
+    .fb-feed-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+    }
+
+    .fb-feed-card {
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      width: 100%;
+      max-width: 680px;
+    }
+
+    .fb-feed-card-header {
+      background: var(--bg-dark);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .fb-feed-card-header img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      object-fit: cover;
+    }
+
+    .fb-feed-card-header-text strong {
+      display: block;
+      color: var(--cream);
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+    }
+
+    .fb-feed-card-header-text span {
+      color: rgba(245,222,179,0.5);
+      font-size: 0.8rem;
+    }
+
+    /* Plugin container */
+    .fb-plugin-container {
+      background: #f0ebe3;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      min-height: 700px;
+    }
+
+    .fb-plugin-container .fb-page {
+      max-width: 100%;
+    }
+
+    /* Direct link button */
+    .fb-direct-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #1877F2;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background 0.3s, transform 0.2s;
+      margin-top: 8px;
+    }
+
+    .fb-direct-link:hover {
+      background: #0e5fc7;
+      transform: translateY(-2px);
+    }
+
+    .fb-logo {
+      width: 22px;
+      height: 22px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1877F2;
+      font-weight: 900;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    /* Side info panel */
+    .specials-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .specials-sidebar {
+      position: sticky;
+      top: 90px;
+    }
+
+    .sidebar-card {
+      background: white;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    .sidebar-card-head {
+      background: var(--primary-dark);
+      color: var(--cream);
+      padding: 14px 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+    }
+
+    .sidebar-card-body {
+      padding: 18px 20px;
+    }
+
+    .sidebar-card-body p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .sidebar-card-body p:last-child { margin-bottom: 0; }
+
+    .sidebar-hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      font-size: 0.88rem;
+      border-bottom: 1px solid var(--bg);
+    }
+
+    .sidebar-hours-row:last-child { border-bottom: none; }
+    .sidebar-hours-row.today { color: var(--primary); font-weight: 700; }
+    .sidebar-hours-row .day { color: var(--text-light); }
+    .sidebar-hours-row.today .day { color: var(--primary); }
+
+    @media (max-width: 900px) {
+      .specials-layout { grid-template-columns: 1fr; }
+      .specials-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Facebook SDK (loads the Page Plugin — no login or token required) -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0">
+</script>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Samson's <span>Restaurant</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="specials.html" class="active">Today's Specials</a></li>
+      <li><a href="contact.html">Contact & Hours</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== PAGE HEADER ===== -->
+<div class="page-header">
+  <div class="page-header-badge">Live from Facebook</div>
+  <h1>Today's Specials</h1>
+  <p>Fresh every day — straight from Samson's kitchen to their Facebook page</p>
+</div>
+
+<!-- ===== SPECIALS SECTION ===== -->
+<section class="specials-section">
+  <div class="section-inner">
+
+    <!-- Date Banner -->
+    <div class="specials-date-banner" style="margin-bottom:36px;">
+      <span class="specials-date-icon">📅</span>
+      <div class="specials-date-text">
+        <strong id="specials-today">Loading date…</strong>
+        <span>Check below for today's soups &amp; specials</span>
+      </div>
+    </div>
+
+    <div class="specials-layout">
+
+      <!-- Main: Facebook Page Plugin Feed -->
+      <div>
+        <p class="section-label" style="margin-bottom:16px;">Samson's Facebook Feed</p>
+
+        <!-- Facebook Page Plugin — shows public posts, no login needed -->
+        <div class="fb-feed-card">
+          <div class="fb-feed-card-header">
+            <img
+              src="https://graph.facebook.com/Samsonsbarandfamilyrestaurant/picture?type=small"
+              onerror="this.src='https://ui-avatars.com/api/?name=S&background=5C2E0A&color=DAA520&size=42'"
+              alt="Samson's Restaurant"
+            />
+            <div class="fb-feed-card-header-text">
+              <strong>Samson's Restaurant</strong>
+              <span>Latest posts — updates automatically</span>
+            </div>
+          </div>
+          <div class="fb-plugin-container">
+            <div
+              class="fb-page"
+              data-href="https://www.facebook.com/Samsonsbarandfamilyrestaurant/"
+              data-tabs="timeline"
+              data-width="640"
+              data-height="680"
+              data-small-header="true"
+              data-adapt-container-width="true"
+              data-hide-cover="true"
+              data-show-facepile="false"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Fallback direct link -->
+        <div style="margin-top:18px;">
+          <a
+            href="https://www.facebook.com/Samsonsbarandfamilyrestaurant/"
+            target="_blank"
+            rel="noopener"
+            class="fb-direct-link"
+          >
+            <span class="fb-logo">f</span>
+            View Samson's Facebook Page
+          </a>
+          <p style="margin-top:10px;color:var(--text-light);font-size:0.84rem;">
+            If the feed doesn't display, click above to see today's specials directly on Facebook.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="specials-sidebar">
+
+        <!-- Hours -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-head">⏰ Hours</div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-hours-row" data-day="Monday"><span class="day">Monday</span><span style="color:#aaa;">Closed</span></div>
+            <div class="sidebar-hours-row" data-day="Tuesday"><span class="day">Tuesday</span><span>11am – 10pm</span></div>
+            <div class="sidebar-hours-row" data-day="Wednesday"><span class="day">Wednesday</span><span>11am – 10pm</span></div>
+            <div class="sidebar-hours-row" data-day="Thursday"><span class="day">Thursday</span><span>11am – 10pm</span></div>
+            <div class="sidebar-hours-row" data-day="Friday"><span class="day">Friday</span><span>11am – 11pm</span></div>
+            <div class="sidebar-hours-row" data-day="Saturday"><span class="day">Saturday</span><span>11am – 11pm</span></div>
+            <div class="sidebar-hours-row" data-day="Sunday"><span class="day">Sunday</span><span>12pm – 8pm</span></div>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-head">📍 Find Us</div>
+          <div class="sidebar-card-body">
+            <p>1736 US Route 9<br>Castleton-on-Hudson, NY 12033</p>
+            <a href="tel:5184775353" style="display:block;background:var(--primary);color:white;text-align:center;padding:11px;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.9rem;margin-bottom:8px;">📞 (518) 477-5353</a>
+            <a href="https://maps.google.com/?q=1736+US-9,+Castleton-on-Hudson,+NY+12033" target="_blank" rel="noopener" style="display:block;background:var(--bg);color:var(--primary);text-align:center;padding:11px;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.9rem;border:1px solid var(--border);">🗺️ Get Directions</a>
+          </div>
+        </div>
+
+        <!-- Note -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-head">🍽️ About the Specials</div>
+          <div class="sidebar-card-body">
+            <p>Samson's posts their daily soups and specials on Facebook each morning. The feed on the left updates automatically — no refresh needed.</p>
+            <p>Look for posts mentioning <strong style="color:var(--primary);">SOUPS</strong> and <strong style="color:var(--primary);">SPECIALS</strong> at the top of the feed.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ALSO ON THE MENU ===== -->
+<div class="cta-strip">
+  <h2>Want to See the Full Menu?</h2>
+  <p>Browse all of our regular items — dinners, sandwiches, appetizers and more.</p>
+  <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>Samson's Restaurant</h2>
+        <p>A family-owned bar and restaurant in Castleton-on-Hudson, NY. Serving fresh comfort food since 2010.</p>
+        <div class="footer-phone">📞 (518) 477-5353</div>
+      </div>
+      <div class="footer-links">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="specials.html">Today's Specials</a></li>
+          <li><a href="contact.html">Contact &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Visit Us</h3>
+        <ul>
+          <li><a href="https://maps.google.com/?q=1736+US-9,+Castleton-on-Hudson,+NY+12033" target="_blank">1736 US Route 9<br>Castleton-on-Hudson, NY 12033</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Samson's Bar &amp; Family Restaurant. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script defer src="/_vercel/insights/script.js"></script>
+<script src="main.js"></script>
+<script>
+  // Highlight today in hours sidebar
+  document.addEventListener('DOMContentLoaded', () => {
+    const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+    document.querySelectorAll('.sidebar-hours-row').forEach(row => {
+      if (row.dataset.day === today) row.classList.add('today');
+    });
+  });
+</script>
+</body>
+</html>

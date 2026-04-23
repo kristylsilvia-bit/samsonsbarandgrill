@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu – Samson's Restaurant</title>
+  <meta name="description" content="Browse the full menu at Samson's Bar & Family Restaurant in Castleton-on-Hudson, NY." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Samson's <span>Restaurant</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="specials.html">Today's Specials</a></li>
+      <li><a href="contact.html">Contact & Hours</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== PAGE HEADER ===== -->
+<div class="page-header">
+  <div class="page-header-badge">Samson's Kitchen</div>
+  <h1>Our Menu</h1>
+  <p>Fresh ingredients, honest portions, and flavors that feel like home</p>
+</div>
+
+<!-- ===== MENU ===== -->
+<section class="menu-section">
+  <div class="section-inner">
+
+    <!-- Tab Navigation -->
+    <div class="menu-nav">
+      <button class="menu-tab active"  onclick="showTab('appetizers', this)">Appetizers</button>
+      <button class="menu-tab"         onclick="showTab('salads', this)">Salads</button>
+      <button class="menu-tab"         onclick="showTab('cold-sandwiches', this)">Cold Sandwiches</button>
+      <button class="menu-tab"         onclick="showTab('hot-sandwiches', this)">Hot Sandwiches</button>
+      <button class="menu-tab"         onclick="showTab('burgers', this)">Burgers</button>
+      <button class="menu-tab"         onclick="showTab('dinners', this)">Dinners</button>
+      <button class="menu-tab"         onclick="showTab('sides', this)">Sides</button>
+      <button class="menu-tab"         onclick="showTab('kids', this)">Kids' Menu</button>
+    </div>
+
+    <!-- ===== APPETIZERS ===== -->
+    <div class="menu-category active" id="cat-appetizers">
+      <h2 class="menu-category-title">Appetizers</h2>
+      <div class="menu-items-grid">
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Nachos Loaded</div>
+            <div class="menu-item-desc">Huge plate of baked nachos topped with seasoned beef or chicken, black olives, jalapeños, and cheese served with a side of sour cream and salsa.</div>
+          </div>
+          <div class="menu-item-price">$11.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Chicken Wings</div>
+            <div class="menu-item-desc">A dozen regular or boneless wings — Mild, Medium/BBQ, Medium/Butter, Franks & Butter, Hot, Extreme, BBQ, Honey/BBQ, Garlic Parm, or signature Stinger Honey Garlic. Served with chunky blue cheese and celery sticks.</div>
+            <div class="menu-item-desc" style="margin-top:6px;font-weight:700;color:var(--primary);">Bone-In $10.99 Doz · $5.99 ½ Doz &nbsp;|&nbsp; Boneless $9.99 Doz</div>
+          </div>
+          <div class="menu-item-price"></div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Fried Shrimp</div>
+            <div class="menu-item-desc">(6) Jumbo shrimp breaded served with tartar, plain or spicy cocktail sauce.</div>
+          </div>
+          <div class="menu-item-price">$8.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Shrimp Cocktail</div>
+            <div class="menu-item-desc">(5) Jumbo shrimp served with spicy or plain cocktail sauce.</div>
+          </div>
+          <div class="menu-item-price">$9.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Quesadillas</div>
+            <div class="menu-item-desc">Plain cheese or fajita grilled chicken sautéed peppers, onions, and tomatoes with tons of melted cheddar-jack cheese served with sour cream and salsa.</div>
+            <div class="menu-item-desc" style="margin-top:4px;font-weight:700;color:var(--primary);">Cheese $9.99 &nbsp;|&nbsp; Chicken $13.99</div>
+          </div>
+          <div class="menu-item-price"></div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Homemade Chicken Tenders</div>
+            <div class="menu-item-desc">Chicken tenderloins breaded in our own breading served with your choice of wing sauce, raspberry sauce, honey mustard or barbeque.</div>
+          </div>
+          <div class="menu-item-price">$9.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Cheddar Cheese Jalapeño Poppers</div>
+            <div class="menu-item-desc">Served with salsa.</div>
+          </div>
+          <div class="menu-item-price">$7.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Mozzarella Sticks</div>
+            <div class="menu-item-desc">Served with raspberry sauce or marinara sauce.</div>
+          </div>
+          <div class="menu-item-price">$7.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Chicken Cordon Bleu Balls</div>
+            <div class="menu-item-desc">Served with honey mustard.</div>
+          </div>
+          <div class="menu-item-price">$7.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Fried Ravioli</div>
+            <div class="menu-item-desc">With a side of marinara.</div>
+          </div>
+          <div class="menu-item-price">$7.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Breaded Mushrooms</div>
+            <div class="menu-item-desc">Your choice of sauce.</div>
+          </div>
+          <div class="menu-item-price">$7.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Deep Fried Breaded Pickles</div>
+            <div class="menu-item-desc">Your choice of sauce.</div>
+          </div>
+          <div class="menu-item-price">$6.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Breaded Zucchini Sticks</div>
+            <div class="menu-item-desc">Your choice of sauce.</div>
+          </div>
+          <div class="menu-item-price">$7.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Fried Green Beans</div>
+            <div class="menu-item-desc">Your choice of sauce.</div>
+          </div>
+          <div class="menu-item-price">$6.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Chili</div>
+            <div class="menu-item-desc">Served with crackers, topped with cheese and onions.</div>
+            <div class="menu-item-desc" style="margin-top:4px;font-weight:700;color:var(--primary);">Cup $3.99 &nbsp;|&nbsp; Bowl $6.99</div>
+          </div>
+          <div class="menu-item-price"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== SALADS ===== -->
+    <div class="menu-category" id="cat-salads">
+      <h2 class="menu-category-title">Salads</h2>
+      <p class="menu-category-note">Dressing Choices: Italian · Blue Cheese · Ranch · Thousand Island · Balsamic Vinegar · Parmesan Peppercorn · Caesar · Honey Mustard · Gluten Free Honey Mustard</p>
+      <div class="menu-items-grid">
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Tossed Salad</div>
+            <div class="menu-item-desc">Green leaf lettuce, tomatoes, onions, green peppers, cucumbers and croutons served with your choice of dressing.</div>
+            <div class="menu-item-desc" style="margin-top:4px;font-weight:700;color:var(--primary);">Small $3.99 &nbsp;|&nbsp; Large $7.99</div>
+          </div>
+          <div class="menu-item-price"></div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Caesar Salad</div>
+            <div class="menu-item-desc">Green leaf lettuce, parmesan cheese, white shredded cheddar, croutons, and caesar dressing.</div>
+            <div class="menu-item-desc" style="margin-top:4px;font-weight:700;color:var(--primary);">$7.99 &nbsp;|&nbsp; Add Grilled Chicken $12.99</div>
+          </div>
+          <div class="menu-item-price"></div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Chicken Salad</div>
+            <div class="menu-item-desc">Grilled or breaded chicken over our large tossed salad served with your choice of dressing.</div>
+          </div>
+          <div class="menu-item-price">$13.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Buffalo Chicken Salad</div>
+            <div class="menu-item-desc">Buffalo style grilled or breaded chicken over our large tossed salad topped with blue cheese crumbles. Served with your choice of dressing.</div>
+          </div>
+          <div class="menu-item-price">$14.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Antipasto</div>
+            <div class="menu-item-desc">Our large tossed salad topped with ham, salami, pepperoni, provolone cheese, black olives, peppers, onions and tomatoes.</div>
+          </div>
+          <div class="menu-item-price">$12.99</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== COLD SANDWICHES ===== -->
+    <div class="menu-category" id="cat-cold-sandwiches">
+      <h2 class="menu-category-title">Cold Sandwiches</h2>
+      <p class="menu-category-note">Comes with a crispy pickle spear and your choice of: Macaroni Salad, Potato Salad, Coleslaw, or Chips. Add fries for $1.00 extra. All served with lettuce, tomatoes, and onions on white, whole wheat, rye, hard roll, sub roll, or tortilla wrap with American, Swiss, Provolone, or Cheddar cheese.</p>
+      <div class="menu-items-grid">
+
+        <div class="menu-item">
+          <div><div class="menu-item-name">Honey Ham</div></div>
+          <div class="menu-item-price">$10.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div><div class="menu-item-name">Roasted Turkey</div></div>
+          <div class="menu-item-price">$10.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div><div class="menu-item-name">Oven Roasted Beef</div></div>
+          <div class="menu-item-price">$10.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div><div class="menu-item-name">All White Tuna</div></div>
+          <div class="menu-item-price">$10.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div><div class="menu-item-name">Corned Beef</div></div>
+          <div class="menu-item-price">$10.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">BLT Sandwich</div>
+            <div class="menu-item-desc">Bacon, lettuce, and tomato on your choice of bread served with macaroni salad, potato salad, coleslaw or chips.</div>
+          </div>
+          <div class="menu-item-price">$8.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Club Sandwich</div>
+            <div class="menu-item-desc">Your choice of turkey, roast beef, ham, or corned beef with bacon, lettuce, and tomato and your choice of bread. Served with french fries.</div>
+          </div>
+          <div class="menu-item-price">$13.99</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== HOT SANDWICHES ===== -->
+    <div class="menu-category" id="cat-hot-sandwiches">
+      <h2 class="menu-category-title">Hot Sandwiches</h2>
+      <p class="menu-category-note">All served with French fries.</p>
+      <div class="menu-items-grid">
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Turkey, Ham, or Tuna Melt</div>
+            <div class="menu-item-desc">Choice of meat served with choice of bread and cheese with grilled tomato and onion.</div>
+          </div>
+          <div class="menu-item-price">$12.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Sausage, Peppers and Onions</div>
+            <div class="menu-item-desc">Italian sausage with grilled peppers and onions smothered with melted cheese of your choice.</div>
+          </div>
+          <div class="menu-item-price">$11.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Chicken Sandwich</div>
+            <div class="menu-item-desc">Grilled or breaded chicken served with lettuce, tomato and onion on a hard roll with a side of mayo.</div>
+          </div>
+          <div class="menu-item-price">$12.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Reuben</div>
+            <div class="menu-item-desc">Certified angus beef grilled corned beef or turkey with melted swiss cheese, sauerkraut and thousand island dressing on rye bread.</div>
+          </div>
+          <div class="menu-item-price">$12.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Meatball Sub</div>
+            <div class="menu-item-desc">Our homemade meatballs topped with melted cheese and marinara sauce served on our hoagie roll.</div>
+          </div>
+          <div class="menu-item-price">$11.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Steak and Cheese</div>
+            <div class="menu-item-desc">Our thinly sliced rib-eye served with grilled peppers, onions and mushrooms covered with melted cheese served on our hoagie roll.</div>
+          </div>
+          <div class="menu-item-price">$12.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Haddock Sandwich</div>
+            <div class="menu-item-desc">Beer battered haddock fried till golden brown served on a kaiser roll with your choice of cocktail or tartar sauce.</div>
+          </div>
+          <div class="menu-item-price">$11.99</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== BURGERS ===== -->
+    <div class="menu-category" id="cat-burgers">
+      <h2 class="menu-category-title">Burgers</h2>
+      <p class="menu-category-note">Our certified angus beef fresh ground chuck hand formed into an 8 oz patty grilled to perfection — served with lettuce, tomatoes, onions, mayo, and your choice of cheese with fries. Add bacon for $1.00.</p>
+      <div class="menu-items-grid">
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Burger — 8 oz</div>
+            <div class="menu-item-desc">Full-size certified angus beef patty with all the fixings.</div>
+          </div>
+          <div class="menu-item-price">$10.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Burger — 4 oz</div>
+            <div class="menu-item-desc">Half-size certified angus beef patty with all the fixings.</div>
+          </div>
+          <div class="menu-item-price">$5.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Add Bacon</div>
+            <div class="menu-item-desc">Add crispy bacon to any burger.</div>
+          </div>
+          <div class="menu-item-price">+$1.00</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== DINNERS ===== -->
+    <div class="menu-category" id="cat-dinners">
+      <h2 class="menu-category-title">Dinners</h2>
+      <p class="menu-category-note">All served with a small salad with your choice of dressing and your choice of mashed potatoes or French fries and mixed vegetables — except Chicken Parmigiana and Lasagna.</p>
+      <div class="menu-items-grid">
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Meatloaf</div>
+            <div class="menu-item-desc">Our juicy ground chuck mixed with our special ingredients.</div>
+          </div>
+          <div class="menu-item-price">$13.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Chicken Parmigiana</div>
+            <div class="menu-item-desc">A large piece of all white breast hand breaded chicken over a heaping bed of pasta and spaghetti sauce.</div>
+          </div>
+          <div class="menu-item-price">$14.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Flat Iron</div>
+            <div class="menu-item-desc">Two of our 6 oz sirloin steaks grilled to your liking.</div>
+          </div>
+          <div class="menu-item-price">$16.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Hot Oven Roasted Beef</div>
+            <div class="menu-item-desc">Oven roasted beef served open faced, smothered in gravy.</div>
+          </div>
+          <div class="menu-item-price">$14.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Rib Dinner</div>
+            <div class="menu-item-desc">Slowly cooked St. Louis style ribs lightly covered in our BBQ sauce.</div>
+            <div class="menu-item-desc" style="margin-top:4px;font-weight:700;color:var(--primary);">Full Rack $26.99 &nbsp;|&nbsp; Half Rack $16.99</div>
+          </div>
+          <div class="menu-item-price"></div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Lasagna</div>
+            <div class="menu-item-desc">Our homemade lasagna with big chunks of beef and Italian sausage.</div>
+          </div>
+          <div class="menu-item-price">$14.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Fried Haddock</div>
+            <div class="menu-item-desc">Fresh haddock beer battered then fried golden brown, served with french fries and coleslaw.</div>
+          </div>
+          <div class="menu-item-price">$15.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Rib Eye</div>
+            <div class="menu-item-desc">12 ounces of mouth-watering rib eye grilled to your liking.</div>
+          </div>
+          <div class="menu-item-price">$19.99</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">New York Strip Steak</div>
+            <div class="menu-item-desc">Our 12 oz New York strip steak cooked to your liking.</div>
+          </div>
+          <div class="menu-item-price">$18.99</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== SIDES ===== -->
+    <div class="menu-category" id="cat-sides">
+      <h2 class="menu-category-title">Sides</h2>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Steak Fries</div></div><div class="menu-item-price">$3.99</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Waffle Fries, Shoestring Fries, Sweet Potato Fries, or Onion Petals</div></div><div class="menu-item-price">$4.99</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Macaroni Salad, Potato Salad or Coleslaw</div></div><div class="menu-item-price">$1.99</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chips</div></div><div class="menu-item-price">$1.00</div></div>
+      </div>
+    </div>
+
+    <!-- ===== KIDS ===== -->
+    <div class="menu-category" id="cat-kids">
+      <h2 class="menu-category-title">For the Kids</h2>
+      <p class="menu-category-note">All served with French fries and a drink.</p>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Grilled Cheese</div></div><div class="menu-item-price">$6.99</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Hot Dog</div></div><div class="menu-item-price">$6.99</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Tenders</div></div><div class="menu-item-price">$6.99</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Hamburger or Cheeseburger</div></div><div class="menu-item-price">$6.99</div></div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Spaghetti with Butter or Sauce</div>
+            <div class="menu-item-desc">Served with a drink.</div>
+          </div>
+          <div class="menu-item-price">$4.99</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<div class="cta-strip">
+  <h2>Hungry? Come On In!</h2>
+  <p>Walk-ins welcome · Takeout available · Call ahead for large parties</p>
+  <a href="tel:5184775353" class="btn btn-primary">📞 (518) 477-5353</a>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>Samson's Restaurant</h2>
+        <p>A family-owned bar and restaurant in Castleton-on-Hudson, NY. Serving fresh comfort food since 2010.</p>
+        <div class="footer-phone">📞 (518) 477-5353</div>
+      </div>
+      <div class="footer-links">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="specials.html">Today's Specials</a></li>
+          <li><a href="contact.html">Contact &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Visit Us</h3>
+        <ul>
+          <li><a href="https://maps.google.com/?q=1736+US-9,+Castleton-on-Hudson,+NY+12033" target="_blank">1736 US Route 9<br>Castleton-on-Hudson, NY 12033</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Samson's Bar &amp; Family Restaurant. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script defer src="/_vercel/insights/script.js"></script>
+<script src="main.js"></script>
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.menu-category').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.menu-tab').forEach(el => el.classList.remove('active'));
+  document.getElementById('cat-' + id).classList.add('active');
+  btn.classList.add('active');
+  document.querySelectorAll('#cat-' + id + ' .menu-item').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    setTimeout(() => {
+      el.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    }, i * 30);
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+=============================================
+  SAVE YOUR 4 PHOTOS IN THIS FOLDER
+  with these exact filenames:
+=============================================
+
+  sign-sunset.jpg  →  The glowing Samson's sign at sunset (pink/purple sky)
+  exterior.jpg     →  The restaurant building exterior (daytime, flowers out front)
+  bar.jpg          →  The bar interior with all the TVs showing sports
+  party.jpg        →  The big group/community party photo at the bar
+
+Just right-click each photo → Save As → rename it to one of the names above
+and save it right here in this "images" folder.
+
+Already downloaded:
+  logo.jpg         →  Samson's profile picture from Facebook (auto-downloaded)
+
+=============================================
